@@ -14,6 +14,7 @@ async function draw_card(){
     return response;
 }
 
+// generates HTML for one card
 async function generate_card_HTML(){
     let card = await draw_card();
     let HTMLcard = `<img src="${card.cards[0].image}">`;
@@ -21,6 +22,7 @@ async function generate_card_HTML(){
     $("#cards-container").append(HTMLcard);
 }
 
+// on button click, empties card container and adds new card to the container.
 $("#draw-card").on("submit", async function(e){
     e.preventDefault()
     $("#cards-container").empty();
