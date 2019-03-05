@@ -35,10 +35,6 @@ async function getThreeRandomPokemon(){
     let poke2Species = await $.get(poke2Info["species"]["url"])
     let poke3Species = await $.get(poke3Info["species"]["url"])
 
-    // let poke1FlavorText = poke1Info["flavor_text_entries"];
-    // let poke2FlavorText = poke2Info["flavor_text_entries"];
-    // let poke3FlavorText = poke3Info["flavor_text_entries"];
-
     let poke1Flavors = poke1Species["flavor_text_entries"];
     let poke2Flavors = poke2Species["flavor_text_entries"];
     let poke3Flavors = poke3Species["flavor_text_entries"];
